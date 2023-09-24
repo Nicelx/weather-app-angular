@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-home.component.css']
 })
 export class AppHomeComponent implements OnInit {
-
+  city: string = 'Moscow'
+  temperature: string = '20*'
+  description: string = 'cloudy, windy'
+  coords: string = 'H:21long L:18'
   constructor() { }
 
   ngOnInit(): void {
