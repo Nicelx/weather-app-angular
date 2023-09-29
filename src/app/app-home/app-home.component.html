@@ -4,6 +4,8 @@
 <span>{{coords}}</span>
 <p>app-home works!</p>
 <div class = "expand-block">
+	<span class="expand-block__grabber"></span>
+
 	<div class = "expand-block__forecast-buttons-block">
 		<button class = "expand-block__forecast-button">Hourly Forecast</button>
 		<button class = "expand-block__forecast-button">Weekly Forecast</button>
@@ -30,6 +32,7 @@
 			<span class = "temperature-forecast__temperature">19*</span>
 		</div>
 	</div>
+
 
 	<div class = "air-quality">
 		<h3 class = "air-quality__title">AIR QUALITY</h3>
@@ -79,6 +82,20 @@
 	<div class="visibility">
 		<h3 class="visibility__title">VISIBILITY</h3>
 		<span class="visibility__value">8 km</span>
+		<span class = "visibility__description">Similar to the actual</span>
 	</div>
 
+	<div class="pressure">
+		<h3 class="pressure__title"></h3>
+		<img class = "pressure__graph" src="" alt="">
+	</div>
+
+</div>
+
+<div class="footer">
+	<button class="footer__location">
+		<img src="../assets/map.svg" alt="">
+	</button>
+	<button class="footer__plus"></button>
+	<button class="footer__hamburger"></button>
 </div>
