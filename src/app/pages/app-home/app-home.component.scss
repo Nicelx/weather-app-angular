@@ -9,7 +9,9 @@
 	}
 
 	&__title {
-		margin-top: 11vh;
+		padding-top: 11vh;
+		font-family: $font-primary;
+		font-size: 70px;
 	}
 
 	&__house-img-block {
