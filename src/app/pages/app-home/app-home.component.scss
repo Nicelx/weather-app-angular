@@ -3,6 +3,7 @@
 .home {
 	color: white;
 	font-family: 'STIX Two Text', serif;
+	text-align: center;
 
 	&__wrapper {
 		width: 390px;
@@ -10,9 +11,14 @@
 		background-image: url("../../../assets/png/background.png");
 		background-size: contain;
 	}
+	&__info-block {
+		display: flex;
+		flex-direction: column;
+	}
 
 	&__title {
 		padding-top: 11vh;
+		padding-bottom: 12px;
 		// font-family: $font-primary;
 		font-family: 'STIX Two Text', serif;
 		font-size: 34px;
@@ -22,6 +28,14 @@
 	&__temperature {
 		font-size: 96px;
 		font-weight: 200;
+		padding-bottom: 12px;
+		line-height: 70px;
+	}
+
+	&__description {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 24px;
 	}
 
 	&__house-img-block {

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppHomeComponent implements OnInit {
   city: string = 'Moscow'
-  temperature: string = '20*'
+  temperature: string = '20'
   description: string = 'cloudy, windy'
   coords: string = 'H:21long L:18'
   constructor() { }
