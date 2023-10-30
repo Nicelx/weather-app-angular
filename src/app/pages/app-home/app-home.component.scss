@@ -74,6 +74,10 @@
 		border-radius: 2px;
 		cursor: pointer;
 	}
+
+	&__temperature-list {
+		display: flex;
+	}
 }
 
 .footer {
@@ -94,8 +98,10 @@
 }
 
 .temperature-forecast {
+	color: $color-light-primary;
+
 	&__weather-icon {
-		width: 100px;
-		height: 100px;
+		width: 32px;
+		height: 32px;
 	}
 }
