@@ -1,9 +1,9 @@
 // @import '../../../styles.scss';
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .home {
 	color: white;
-	font-family: 'STIX Two Text', serif;
+	font-family: "STIX Two Text", serif;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -58,39 +58,37 @@
 
 .expand-block {
 	margin-top: 28vh;
-	background-color: #48319D33;
+	background-color: #48319d33;
 	// background-color: linear-gradient(168deg, rgba(46, 51, 90, 0.26) -4.68%, rgba(28, 27, 51, 0.26) 95.45%);
-	box-shadow: 0px 1px 0px 0px #FFF inset;
+	box-shadow: 0px 1px 0px 0px #fff inset;
 	backdrop-filter: blur(25px);
 	border-radius: 44px;
 	height: 325px;
-	
-
 
 	&__grabber {
 		width: 48px;
 		height: 5px;
-		background-color: rgba(0,0,0,0.3);
+		background-color: rgba(0, 0, 0, 0.3);
 		border-radius: 2px;
 		cursor: pointer;
 	}
 
 	&__temperature-list {
 		display: flex;
+		gap: 20px;
 	}
 }
 
 .footer {
-	background-image: url('../../../assets/bar-rectangle.svg');
+	background-image: url("../../../assets/bar-rectangle.svg");
 	background-repeat: no-repeat;
 
 	&__plus-bg {
-		background-image: url('../../../assets/bar-center.svg');
+		background-image: url("../../../assets/bar-center.svg");
 		background-repeat: no-repeat;
 		height: 100px;
 	}
 }
-
 
 .icon {
 	width: 44px;
@@ -98,7 +96,30 @@
 }
 
 .temperature-forecast {
+	width: 44px;
+	height: 114px;
 	color: $color-light-primary;
+	display: flex;
+	flex-direction: column;
+	padding: 16px 8px 16px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 30px;
+	background: rgba(72, 49, 157, 0.2);
+	box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.25),
+		1px 1px 0px 0px rgba(255, 255, 255, 0.25) inset;
+		transition: .2s ease-in;
+
+	&:hover {
+		background-color: $color-primary;
+	}
+
+	// &--active {
+	// 	background-color: $color-primary;
+	// }
+
+	&__time {
+		margin-bottom: 16px;
+	}
 
 	&__weather-icon {
 		width: 32px;
