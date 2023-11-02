@@ -66,11 +66,16 @@
 	height: 325px;
 
 	&__grabber {
+		margin: auto;
+		margin-top: 10px;
 		width: 48px;
 		height: 5px;
 		background-color: rgba(0, 0, 0, 0.3);
 		border-radius: 2px;
 		cursor: pointer;
+	}
+	&__forecast-buttons-block {
+		height: 49px;
 	}
 
 	&__temperature-list {
