@@ -65,17 +65,54 @@
 	border-radius: 44px;
 	height: 325px;
 
+	&__blur-2 {
+		left: 50%;
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		background-color: conic-gradient(
+			from 180deg at 50% 50%,
+			rgba(97, 47, 171, 0) 50.017388463020325deg,
+			#612fab 129.55134987831116deg,
+			rgba(97, 47, 171, 0) 226.05700492858887deg,
+			#612fab 312.53719568252563deg
+		);
+		filter: blur(70px);
+	}
 	&__grabber {
-		margin: auto;
-		margin-top: 10px;
+		// margin: auto;
+		// margin-top: 10px;
+		position: absolute;
+		top: 8px;
+		left: 50%;
+		margin-left: -24px;
 		width: 48px;
 		height: 5px;
 		background-color: rgba(0, 0, 0, 0.3);
 		border-radius: 2px;
 		cursor: pointer;
 	}
-	&__forecast-buttons-block {
-		height: 49px;
+	&__header {
+		padding: 25px 32px 4px;
+		position: relative;
+		font-size: 15px;
+		color: $color-dark-secondary;
+		font-weight: 600;
+		line-height: 20;
+		letter-spacing: -0.5px;
+	}
+	&__sub-header {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__forecast-button--active {
+		background: linear-gradient(
+			270deg,
+			rgba(255, 255, 255, 0) 57.31%,
+			#fff 78.97%,
+			rgba(255, 255, 255, 0) 97.44%
+		);
+		background-blend-mode: overlay;
 	}
 
 	&__temperature-list {
@@ -113,7 +150,7 @@
 	background: rgba(72, 49, 157, 0.2);
 	box-shadow: 5px 4px 10px 0px rgba(0, 0, 0, 0.25),
 		1px 1px 0px 0px rgba(255, 255, 255, 0.25) inset;
-		transition: .2s ease-in;
+	transition: 0.2s ease-in;
 
 	&:hover {
 		background-color: $color-primary;
@@ -130,7 +167,7 @@
 		line-height: 20px;
 		letter-spacing: -0.5px;
 	}
-	
+
 	&__weather-icon {
 		margin-bottom: 16px;
 		width: 32px;
