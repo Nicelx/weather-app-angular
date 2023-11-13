@@ -195,6 +195,12 @@
 		font-size: 1.4em;
 		font-weight: 600;
 	}
+	&__scale {
+		height: 2px;
+		width: 360px;
+		border-radius: 1px;
+		background: linear-gradient(to right ,$color-dark-primary, $color-dark-secondary);
+	}
 }
 
 .footer {
