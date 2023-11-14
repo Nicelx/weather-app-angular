@@ -194,12 +194,22 @@
 	&__info {
 		font-size: 1.4em;
 		font-weight: 600;
+		margin-bottom: 15px;
 	}
 	&__scale {
-		height: 2px;
-		width: 360px;
-		border-radius: 1px;
-		background: linear-gradient(to right ,$color-dark-primary, $color-dark-secondary);
+		height: 3px;
+		width: 100%;
+		border-radius: 2px;
+		background: linear-gradient(to right ,$color-primary 20%, $color-secondary);
+		margin-bottom: 15px;
+	}
+
+	&__scale-mark {
+		width: 4px;
+		height: 4px;
+		background-color: white;
+		border-radius: 2px;
+		border: 1px solid $color-dark-quaternary;
 	}
 }
 
