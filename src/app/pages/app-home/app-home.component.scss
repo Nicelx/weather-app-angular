@@ -152,7 +152,7 @@
 
 .weather-details {
 	display: inline-flex;
-	flex-wrap: wrap;	
+	flex-wrap: wrap;
 	width: 100%;
 	padding: 32px;
 	align-items: flex-start;
@@ -167,7 +167,15 @@
 	}
 }
 
-.air-quality, .uv-index, .sunrise, .wind, .rainfall, .feels-like, .humidity, .visibility, .pressure {
+.air-quality,
+.uv-index,
+.sunrise,
+.wind,
+.rainfall,
+.feels-like,
+.humidity,
+.visibility,
+.pressure {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -182,8 +190,6 @@
 		rgba(28, 27, 51, 0.26) 95.72%
 	);
 }
-
-
 
 .air-quality {
 	width: 348px;
@@ -200,7 +206,7 @@
 		height: 3px;
 		width: 100%;
 		border-radius: 2px;
-		background: linear-gradient(to right ,$color-primary 20%, $color-secondary);
+		background: linear-gradient(to right, $color-primary 20%, $color-secondary);
 		margin-bottom: 15px;
 	}
 
@@ -210,6 +216,18 @@
 		background-color: white;
 		border-radius: 2px;
 		border: 1px solid $color-dark-quaternary;
+	}
+	&__more {
+	}
+	&__arrow {
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border: solid white;
+		border: 0 3px 3px 0;
+		display: inline-block;
+		padding: 1px;
+		transform: rotate(-45deg);
 	}
 }
 
