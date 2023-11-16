@@ -207,9 +207,9 @@
 		width: 100%;
 		border-radius: 2px;
 		background: linear-gradient(to right, $color-primary 20%, $color-secondary);
-		margin-bottom: 15px;
+		margin-bottom: 14px;
 	}
-
+	
 	&__scale-mark {
 		width: 4px;
 		height: 4px;
@@ -217,16 +217,21 @@
 		border-radius: 2px;
 		border: 1px solid $color-dark-quaternary;
 	}
-	&__more {
+	&__see-more-block {
+		border-top: 1px solid $color-dark-quaternary;
+		padding-top: 15px;
+		padding-right: 5px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 	&__arrow {
-		display: inline-block;
-		width: 10px;
-		height: 10px;
-		border: solid white;
-		border: 0 3px 3px 0;
-		display: inline-block;
-		padding: 1px;
+		width: 14px;
+		height: 14px;
+		border: solid rgba($color-dark-secondary, 0.3);
+		border: 0px 2px 2px 0px;
+		border-width: 0 2px 2px 0;
 		transform: rotate(-45deg);
 	}
 }
