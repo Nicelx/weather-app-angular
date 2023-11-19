@@ -236,6 +236,15 @@
 	}
 }
 
+.uv-index {
+	&__title {
+		margin-bottom: 18px;
+	}
+	&__value {
+		font-size: 1.8em;
+	}
+}
+
 .footer {
 	background-image: url("../../../assets/bar-rectangle.svg");
 	background-repeat: no-repeat;
