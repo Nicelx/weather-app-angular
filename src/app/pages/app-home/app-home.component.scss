@@ -264,6 +264,25 @@
 	}
 }
 
+.sunrise {
+	&__title {
+		margin-bottom: 6px;
+	}
+	&__value {
+		font-size: 1.7em;
+	}
+
+	&__scale {
+		// TO DO
+		height: 120px;
+		margin-bottom: 10px;
+	}
+	&__info {
+		font-size: 0.8em;
+		font-weight: 400;
+	}
+}
+
 .footer {
 	background-image: url("../../../assets/bar-rectangle.svg");
 	background-repeat: no-repeat;
