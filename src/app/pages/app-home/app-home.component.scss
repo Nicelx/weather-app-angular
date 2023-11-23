@@ -283,6 +283,30 @@
 	}
 }
 
+.wind {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	&__title {
+		align-self: flex-start;
+	}
+
+	&__wind-speed {
+		font-size: 1.1em;
+		font-weight: 600;
+	}
+	&__compass {
+		height: 200px;
+		width: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid gray;
+		border-radius: 50%;
+	}
+}
+
 .footer {
 	background-image: url("../../../assets/bar-rectangle.svg");
 	background-repeat: no-repeat;
