@@ -269,7 +269,7 @@
 		margin-bottom: 6px;
 	}
 	&__value {
-		font-size: 1.7em;
+		font-size: $font-size-medium;
 	}
 
 	&__scale {
@@ -278,7 +278,7 @@
 		margin-bottom: 10px;
 	}
 	&__info {
-		font-size: 0.8em;
+		font-size: $font-size-info;
 		font-weight: 400;
 	}
 }
@@ -304,6 +304,44 @@
 		align-items: center;
 		border: 1px solid gray;
 		border-radius: 50%;
+	}
+}
+
+.rainfall {
+	&__title {
+		margin-bottom: 12px;
+	}
+	&__amount {
+		font-size: $font-size-medium;
+		margin-bottom: 5px;
+	}
+	&__amount-info {
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+	&__expected {
+		font-size: $font-size-info;
+		text-align: start;
+	}
+}
+
+.feels-like {
+	&__title {
+		margin-bottom: 6px;
+	}
+	&__temperature {
+		font-size: 1.8em;
+		margin-bottom: 30px;
+	}
+	&__additional-info {
+		font-size: $font-size-info;
+		text-align: start;
+	}
+}
+
+.humidity {
+	&__value {
+		font-size: $font-size-medium;
 	}
 }
 
