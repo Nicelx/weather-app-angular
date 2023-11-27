@@ -116,11 +116,9 @@
 		justify-content: space-between;
 	}
 	&__forecast-button:focus {
-		// position: relative;
 		bottom: 1px;
 		height: 1px;
 		background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
-		// background: black;
 		background-position: bottom;
 
 	}
