@@ -6,13 +6,15 @@ import { AppHomeComponent } from './pages/app-home/app-home.component';
 import { WeatherComponent } from './pages/weather/weather.component';
 import { WeatherItemComponent } from './pages/weather/weather-item/weather-item.component';
 import { RouterModule } from '@angular/router';
+import { ExpandBlockComponent } from './pages/app-home/expand-block/expand-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHomeComponent,
     WeatherComponent,
-    WeatherItemComponent
+    WeatherItemComponent,
+    ExpandBlockComponent
   ],
   imports: [
     BrowserModule,
