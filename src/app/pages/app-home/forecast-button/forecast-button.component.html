@@ -1,4 +1,4 @@
-<button class="forecast-button">
+<button class="forecast-button" (click)="toggleFocus()">
 	<ng-content></ng-content>
 	<div [ngClass]="isFocus? 'underline': ''"></div>
 </button>

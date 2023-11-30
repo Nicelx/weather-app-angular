@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ForecastButtonComponent implements OnInit {
   isFocus = false;
 
-  constructor() { }
+  constructor() { 
+  }
 
+  toggleFocus() {
+    this.isFocus !== this.isFocus;
+  }
+  
   ngOnInit(): void {
   }
+  
 
 }

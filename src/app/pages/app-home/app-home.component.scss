@@ -6,13 +6,9 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	background-image: url("../../../assets/png/background.png");
+	background-size: contain;
 
-	&__wrapper {
-		width: 390px;
-		margin: 0 auto 0 auto;
-		background-image: url("../../../assets/png/background.png");
-		background-size: contain;
-	}
 	&__info-block {
 		display: flex;
 		flex-direction: column;

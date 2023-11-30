@@ -22,7 +22,7 @@ import { ForecastButtonComponent } from './pages/app-home/forecast-button/foreca
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component:  AppHomeComponent},
-      { path: 'weather/:id', component:  WeatherComponent},
+      { path: 'weather', component:  WeatherComponent},
     ]),
   ],
   providers: [],
