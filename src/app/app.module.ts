@@ -8,6 +8,7 @@ import { WeatherItemComponent } from './pages/weather/weather-item/weather-item.
 import { RouterModule } from '@angular/router';
 import { ExpandBlockComponent } from './pages/app-home/expand-block/expand-block.component';
 import { ForecastButtonComponent } from './pages/app-home/forecast-button/forecast-button.component';
+import { HoverDirective } from './pages/app-home/forecast-button/hover.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ForecastButtonComponent } from './pages/app-home/forecast-button/foreca
     WeatherComponent,
     WeatherItemComponent,
     ExpandBlockComponent,
-    ForecastButtonComponent
+    ForecastButtonComponent,
+    HoverDirective,
   ],
   imports: [
     BrowserModule,
