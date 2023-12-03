@@ -1,5 +1,5 @@
-<button appHover class="forecast-button" (click)="toggleFocus()">
+<button (focus)="toggleFocus(true)" (focusout)="toggleFocus(false)" class="forecast-button">
 	<ng-content></ng-content>
-	<!-- <div [ngClass]="isFocus? 'underline': ''"></div> -->
-	<div appHover></div>
+	<div [ngClass]="isFocus? 'underline': ''"></div>
+	<!-- <div ></div> -->
 </button>

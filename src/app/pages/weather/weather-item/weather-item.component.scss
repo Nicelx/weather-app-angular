@@ -1,7 +1,29 @@
 .weather-item {
-	&__weather-icon {
-		width: 100px;	
+	position: relative;
+	background:linear-gradient(90deg, #5936B4 0%, #362A84 103.55%);
+	overflow: hidden;
+	margin-bottom: 20px;
+	border-radius: 20px 20px 10px 10px;
 
-		height: 100px;
+	&:after {
+		content: '';
+		position: absolute;
+		margin: -330px 0 0 12px;
+		width: 400px;
+		height: 200px;
+		transform: rotate(17deg);
+		background-color: black;
+		background: linear-gradient(
+			168deg,
+			rgba(46, 51, 90,1) 1.62%,
+			rgba(28, 27, 51, 1) 95.72%
+			);
+			// box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+	}
+
+	&__weather-icon {
+		width: 160px;	
+
+		height: 160px;
 	}
 }

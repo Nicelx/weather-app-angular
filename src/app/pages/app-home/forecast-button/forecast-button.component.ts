@@ -11,8 +11,9 @@ export class ForecastButtonComponent implements OnInit {
   constructor() { 
   }
 
-  toggleFocus() {
-    this.isFocus !== this.isFocus;
+  toggleFocus(bool: boolean) {
+    this.isFocus = bool;
+    console.log(bool);
   }
   
   ngOnInit(): void {
