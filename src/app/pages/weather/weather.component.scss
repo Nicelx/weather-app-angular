@@ -10,12 +10,18 @@
 
 	&__top {
 		display: flex;
-		margin-bottom: 8px;
+		margin-bottom: 10px;
 		justify-content: space-between;
 	}
 	&__title {
 		font-size: 28px;
 		font-weight: 400;
+
+		&--link:visited, &--link:active, &--link {
+			color: inherit;
+			text-decoration: none;
+
+		}
 	}
 }
 
