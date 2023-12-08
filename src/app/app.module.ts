@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { ForecastButtonComponent } from './pages/app-home/forecast-button/foreca
       { path: '', component:  AppHomeComponent},
       { path: 'weather', component:  WeatherComponent},
     ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
