@@ -13,8 +13,8 @@ export class WeatherService {
 
   }
 
-  getWeather():Observable<any> {
-    return this.http.get('https://api.open-meteo.com/v1/forecast?latitude=51.67204&longitude=39.1843&hourly=temperature_2m')
+  getWeather(latitude:number, longitude:number):Observable<any> {
+    return this.http.get(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
   }
 
 

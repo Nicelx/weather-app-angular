@@ -19,8 +19,9 @@ export class GeocodingService {
 
 	constructor(private http: HttpClient) {}
 
-	setCity() {
-
+	setCity(city: string) {
+		this.city = city;
+		console.log('city', this.city);
 	}
 	getCoords(city:string): Observable<any> {
 		this.city = city;
