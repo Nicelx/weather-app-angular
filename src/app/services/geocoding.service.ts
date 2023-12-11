@@ -19,6 +19,9 @@ export class GeocodingService {
 
 	constructor(private http: HttpClient) {}
 
+	setCoords(coords:Coords) {
+		this.coords = coords;
+	}
 	setCity(city: string) {
 		this.city = city;
 		console.log('city', this.city);

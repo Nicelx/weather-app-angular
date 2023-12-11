@@ -15,7 +15,6 @@ export class AppHomeComponent implements OnInit {
 	temperature: string = "";
 	temperatureArray: string[]= [];
 	description: string = "cloudy, windy";
-	// coords: string = "";
 	latitude: number = 0;
 	longitude: number = 0;
 	data: any;
