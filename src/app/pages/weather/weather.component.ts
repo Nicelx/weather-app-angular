@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-
+  isVisible = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -16,4 +16,7 @@ export class WeatherComponent implements OnInit {
     console.log('keyUp')
   }
 
+  setVisible() {
+    this.isVisible = true;
+  }
 }
