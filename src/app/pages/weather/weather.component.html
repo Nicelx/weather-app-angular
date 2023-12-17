@@ -15,8 +15,9 @@
 				type="text"
 				placeholder="Search for a city or airport"
 				(keyup) = "onKeyUp($event)"
+				(focus)="setVisible()"
 			/>
-			<ul class = "weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'" (focus)="setVisible()">
+			<ul class = "weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'" >
 				<li class = "weather-input__dropdown-item">asdf</li>
 				<li class = "weather-input__dropdown-item">asdf</li>
 				<li class = "weather-input__dropdown-item">asdf</li>
