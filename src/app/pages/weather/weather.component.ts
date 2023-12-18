@@ -16,7 +16,7 @@ export class WeatherComponent implements OnInit {
     console.log('keyUp')
   }
 
-  setVisible() {
-    this.isVisible = true;
+  setVisible(bool: boolean) {
+    this.isVisible = bool;
   }
 }
