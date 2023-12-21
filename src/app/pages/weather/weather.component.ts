@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { debounceTime, map } from 'rxjs';
+import { Observable, debounceTime, fromEvent, map } from 'rxjs';
 
-function debounce(func:Function, timeout = 300){
-  let timer: any;
-  return (...args: any) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => { func.apply(this, args); }, timeout);
-  };
-}
-function saveInput(){
-  console.log('Saving data');
-}
-const processChange = debounce(() => saveInput());
+// function debounce(func:Function, timeout = 300){
+//   let timer: any;
+//   return (...args: any) => {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => { func.apply(this, args); }, timeout);
+//   };
+// }
+// function saveInput(){
+//   console.log('Saving data');
+// }
+// const processChange = debounce(() => saveInput());
 
 
 @Component({
@@ -21,13 +21,16 @@ const processChange = debounce(() => saveInput());
 })
 export class WeatherComponent implements OnInit {
   isVisible = false;
+  source = fromEvent(document, 'keyup');
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onKeyUp(event: Event) {
-    debounceTime(1000);
+    this.source.pipe(debounceTime(1000)).subscribe(() => {
+      console.log('subscribeFired')
+    });
 
     
 
