@@ -14,9 +14,10 @@
 				class="weather-input__input"
 				type="text"
 				placeholder="Search for a city or airport"
-				(keyup) = "onKeyUp($event)"
 				(focus)="setVisible(true)"
 				(focusout)="setVisible(false)"
+				[(ngModel)]="inputText" 
+				(input) = "onSearch()"
 			/>
 			<ul class = "weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'" >
 				<li class = "weather-input__dropdown-item">asdf</li>

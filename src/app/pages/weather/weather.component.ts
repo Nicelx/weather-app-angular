@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, debounceTime, fromEvent, map } from 'rxjs';
+import { Observable, debounceTime, fromEvent, map,Subject,takeUntil } from 'rxjs';
+
 
 // function debounce(func:Function, timeout = 300){
 //   let timer: any;
@@ -21,19 +22,24 @@ import { Observable, debounceTime, fromEvent, map } from 'rxjs';
 })
 export class WeatherComponent implements OnInit {
   isVisible = false;
-  source = fromEvent(document, 'keyup');
+  // source = fromEvent(document, 'keyup');
+  inputText: string = '';
+  private searchSubject = new Subject<string>();
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onKeyUp(event: Event) {
-    this.source.pipe(debounceTime(1000)).subscribe(() => {
-      console.log('subscribeFired')
-    });
+    // this.source.pipe(debounceTime(1000)).subscribe(() => {
+    //   console.log('subscribeFired')
+    // });
+  }
 
-    
-
+  onSearch() {
+    this.searchSubject.next(this.inputText);
   }
 
   setVisible(bool: boolean) {
