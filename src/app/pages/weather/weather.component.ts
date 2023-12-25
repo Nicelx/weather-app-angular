@@ -25,11 +25,14 @@ export class WeatherComponent implements OnInit {
   // source = fromEvent(document, 'keyup');
   inputText: string = '';
   private searchSubject = new Subject<string>();
-
+  private readonly debounceTimeMs = 300; //
 
   constructor() { }
 
   ngOnInit(): void {
+    this.searchSubject.pipe(debounceTime(this.debounceTimeMs)).subscribe((searchValue) => {
+      this.performSearch(searchValue);
+    });
   }
 
   onKeyUp(event: Event) {
@@ -40,6 +43,10 @@ export class WeatherComponent implements OnInit {
 
   onSearch() {
     this.searchSubject.next(this.inputText);
+  }
+
+  performSearch(searchValue: string) {
+    console.log('Performing search for:', searchValue);
   }
 
   setVisible(bool: boolean) {
