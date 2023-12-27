@@ -9,6 +9,7 @@ import { WeatherItemComponent } from './pages/weather/weather-item/weather-item.
 import { RouterModule } from '@angular/router';
 import { ExpandBlockComponent } from './pages/app-home/expand-block/expand-block.component';
 import { ForecastButtonComponent } from './pages/app-home/forecast-button/forecast-button.component';
+import { FormsModule } from '@angular/forms';
 // import { HoverDirective } from './pages/app-home/forecast-button/hover.directive';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ForecastButtonComponent } from './pages/app-home/forecast-button/foreca
       { path: '', component:  AppHomeComponent},
       { path: 'weather', component:  WeatherComponent},
     ]),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

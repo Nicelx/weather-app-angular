@@ -1,18 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, debounceTime, fromEvent, map,Subject,takeUntil } from 'rxjs';
+import { GeocodingService } from 'src/app/services/geocoding.service';
 
 
-// function debounce(func:Function, timeout = 300){
-//   let timer: any;
-//   return (...args: any) => {
-//     clearTimeout(timer);
-//     timer = setTimeout(() => { func.apply(this, args); }, timeout);
-//   };
-// }
-// function saveInput(){
-//   console.log('Saving data');
-// }
-// const processChange = debounce(() => saveInput());
 
 
 @Component({
@@ -22,12 +12,11 @@ import { Observable, debounceTime, fromEvent, map,Subject,takeUntil } from 'rxjs
 })
 export class WeatherComponent implements OnInit {
   isVisible = false;
-  // source = fromEvent(document, 'keyup');
   inputText: string = '';
   private searchSubject = new Subject<string>();
-  private readonly debounceTimeMs = 300; //
+  private readonly debounceTimeMs = 1000; //
 
-  constructor() { }
+  constructor(private geo:GeocodingService) { }
 
   ngOnInit(): void {
     this.searchSubject.pipe(debounceTime(this.debounceTimeMs)).subscribe((searchValue) => {
@@ -47,6 +36,7 @@ export class WeatherComponent implements OnInit {
 
   performSearch(searchValue: string) {
     console.log('Performing search for:', searchValue);
+    this.geo.getCity(searchValue);
   }
 
   setVisible(bool: boolean) {
