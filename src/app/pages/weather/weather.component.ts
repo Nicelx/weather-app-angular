@@ -35,8 +35,10 @@ export class WeatherComponent implements OnInit {
   }
 
   performSearch(searchValue: string) {
+    let result;
     console.log('Performing search for:', searchValue);
-    this.geo.getCity(searchValue);
+    result = this.geo.getCoords(searchValue);
+    console.log(result)
   }
 
   setVisible(bool: boolean) {
