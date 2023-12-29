@@ -23,11 +23,8 @@ export class WeatherComponent implements OnInit {
       this.performSearch(searchValue);
     });
   }
-
-  onKeyUp(event: Event) {
-    // this.source.pipe(debounceTime(1000)).subscribe(() => {
-    //   console.log('subscribeFired')
-    // });
+  ngOnDestroy() {
+    this.searchSubject.complete();
   }
 
   onSearch() {
@@ -37,7 +34,7 @@ export class WeatherComponent implements OnInit {
   performSearch(searchValue: string) {
     let result;
     console.log('Performing search for:', searchValue);
-    result = this.geo.getCoords(searchValue);
+    result = this.geo.getCoords(searchValue).subscribe(response => response);
     console.log(result)
   }
 
