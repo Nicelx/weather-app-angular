@@ -11,10 +11,11 @@ import { GeocodingService } from 'src/app/services/geocoding.service';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
+  variants = [];
   isVisible = false;
   inputText: string = '';
   private searchSubject = new Subject<string>();
-  private readonly debounceTimeMs = 1000; //
+  private readonly debounceTimeMs = 1500; //
 
   constructor(private geo:GeocodingService) { }
 
@@ -32,10 +33,12 @@ export class WeatherComponent implements OnInit {
   }
 
   performSearch(searchValue: string) {
-    let result;
     console.log('Performing search for:', searchValue);
-    result = this.geo.getCoords(searchValue).subscribe(response => response);
-    console.log(result)
+    this.geo.getCoords(searchValue).subscribe(response => {
+      this.geo.variantsList(response.results)
+      this.variants = response.results;
+      console.log(this.variants);
+    });
   }
 
   setVisible(bool: boolean) {

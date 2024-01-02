@@ -20,10 +20,9 @@
 				(input) = "onSearch()"
 			/>
 			<ul class = "weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'" >
-				<li class = "weather-input__dropdown-item">asdf</li>
-				<li class = "weather-input__dropdown-item">asdf</li>
-				<li class = "weather-input__dropdown-item">asdf</li>
-				<li class = "weather-input__dropdown-item">asdf</li>
+				<li class = "weather-input__dropdown-item" *ngFor = "let variant of variants">
+					City {{variant}}
+				</li>
 			</ul>
 		</div>
 		<div class="weather__variations-list">
