@@ -2,7 +2,9 @@
 	<div class="weather">
 		<div class="weather__top">
 			<h2 class="weather__title">
-				<a class = "weather__title--link" href=""> <img src="../../../assets/left-chevron.svg" alt="" /> Weather </a>
+				<a class="weather__title--link" href="">
+					<img src="../../../assets/left-chevron.svg" alt="" /> Weather
+				</a>
 			</h2>
 			<a href="">
 				<img src="../../../assets/social.svg" alt="" class="weather__menu" />
@@ -10,20 +12,21 @@
 		</div>
 		<div class="weather-input__block">
 			<img class="weather-input__search-icon" src="../../../assets/search.svg" alt="" />
-			<input
-				class="weather-input__input"
-				type="text"
-				placeholder="Search for a city or airport"
-				(focus)="setVisible(true)"
-				(focusout)="setVisible(false)"
-				[(ngModel)]="inputText" 
-				(input) = "onSearch()"
-			/>
-			<ul class = "weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'" >
-				<li class = "weather-input__dropdown-item" *ngFor = "let variant of variants">
-					City {{variant}}
-				</li>
-			</ul>
+				<input
+					class="weather-input__input weather-input__input--active"
+					type="text"
+					placeholder="Search for a city or airport"
+					(focus)="setVisible(true)"
+					(focusout)="setVisible(false)"
+					[(ngModel)]="inputText"
+					(input)="onSearch()"
+				/>
+				<ul class="weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'">
+					<li class="weather-input__dropdown-item" *ngFor="let variant of variants">
+						<div>City {{ variant.name }}</div>
+						<div>Province {{ variant.admin1 }}</div>
+					</li>
+				</ul>
 		</div>
 		<div class="weather__variations-list">
 			<app-weather-item></app-weather-item>

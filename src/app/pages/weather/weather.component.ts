@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, debounceTime, fromEvent, map,Subject,takeUntil } from 'rxjs';
 import { GeocodingService } from 'src/app/services/geocoding.service';
 
+interface Variant {
+  name: 'string',
+  id: number,
+  admin1: 'string'
+}
 
 
 
@@ -11,7 +16,7 @@ import { GeocodingService } from 'src/app/services/geocoding.service';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-  variants = [];
+  variants:Variant[] = [];
   isVisible = false;
   inputText: string = '';
   private searchSubject = new Subject<string>();
@@ -35,7 +40,13 @@ export class WeatherComponent implements OnInit {
   performSearch(searchValue: string) {
     console.log('Performing search for:', searchValue);
     this.geo.getCoords(searchValue).subscribe(response => {
-      this.geo.variantsList(response.results)
+      let {results} = response;
+      let {latitude} = results
+      let {longitude} = results
+      
+      this.geo.variantsList(results)
+      this.geo.setCoords({latitude, longitude})
+      
       this.variants = response.results;
       console.log(this.variants);
     });
