@@ -21,11 +21,18 @@ export class AppHomeComponent implements OnInit {
 	constructor(private http: HttpClient, private weatherService: WeatherService, private geo: GeocodingService) {}
 
 	ngOnInit(): void {
+		// if (this.weatherService.weatherData) {
+		// 	let weatherData = this.weatherService.weatherData;
+		// 	this.city = weatherData.
+		// }
+
 		this.geo.getCoords(this.city).subscribe(response => {
 			this.latitude = response.results[0].latitude;
 			this.longitude = response.results[0].longitude;
 
 			this.weatherService.getWeather(this.latitude, this.longitude).subscribe((response) => {
+				console.log(response);
+				this.weatherService.weatherData = response;
 				this.data = response;
 				this.temperatureArray = response.hourly.temperature_2m;
 				this.temperature = response.hourly.temperature_2m[0]

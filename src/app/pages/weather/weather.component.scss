@@ -64,20 +64,29 @@
 		top: 10px;
 		left: 10px;
 	}
-	&__dropdown-list {
-		position: absolute;
-		width: 100%;
-		z-index: 2;
-		background: linear-gradient(
-			168deg,
-			rgba(46, 51, 90, 1) 1.62%,
-			rgba(28, 27, 51, 1) 95.72%
-		);
-	}
-	&__dropdown-item {
+
+}
+
+.dropdown {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	background: linear-gradient(
+		168deg,
+		rgba(46, 51, 90, 1) 1.62%,
+		rgba(28, 27, 51, 1) 95.72%
+	);
+	&__item {
 		padding: 8px;
-		font-size: 20px;
 		border-bottom: 1px solid rgba($color-light-primary, 0.15);
+		&:nth-last-of-type(10n + 1) {
+			border-bottom: none;
+		}
+	}
+
+	&__city {
+		font-size: 24px;
+		margin-bottom: 5px;
 	}
 }
 

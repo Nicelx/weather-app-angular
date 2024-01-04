@@ -13,7 +13,7 @@
 		<div class="weather-input__block">
 			<img class="weather-input__search-icon" src="../../../assets/search.svg" alt="" />
 				<input
-					class="weather-input__input weather-input__input--active"
+					[ngClass]="{'weather-input__input': true , 'weather-input__input--active' : isVisible}"
 					type="text"
 					placeholder="Search for a city or airport"
 					(focus)="setVisible(true)"
@@ -21,10 +21,10 @@
 					[(ngModel)]="inputText"
 					(input)="onSearch()"
 				/>
-				<ul class="weather-input__dropdown-list" [ngClass]="isVisible ? '' : 'hidden'">
-					<li class="weather-input__dropdown-item" *ngFor="let variant of variants">
-						<div>City {{ variant.name }}</div>
-						<div>Province {{ variant.admin1 }}</div>
+				<ul class="dropdown" [ngClass]="isVisible ? '' : 'hidden'">
+					<li class="dropdown__item" *ngFor="let variant of variants">
+						<div class = "dropdown__city">City {{ variant.name }}</div>
+						<div class = "dropdown__province">Province {{ variant.admin1? variant.admin1 : variant.admin2 }}</div>
 					</li>
 				</ul>
 		</div>
