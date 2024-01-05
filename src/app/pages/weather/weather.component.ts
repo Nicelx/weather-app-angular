@@ -52,7 +52,6 @@ export class WeatherComponent implements OnInit {
 
       this.weatherService.cityName = results[0].name
       this.weatherService.getWeather(latitude, longitude).subscribe(response2 => {
-        console.log('response2', response2);
         this.weatherService.weatherData = response2;
         console.log(this.weatherService.weatherData)
       });

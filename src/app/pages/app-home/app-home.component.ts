@@ -11,7 +11,7 @@ import { Coords } from './../../services/geocoding.service';
 	styleUrls: ["./app-home.component.scss"],
 })
 export class AppHomeComponent implements OnInit {
-	city: string = "Воронеж";
+	city: string = 'Воронеж';
 	temperature: string = "";
 	temperatureArray: string[]= [];
 	description: string = "cloudy, windy";
@@ -21,11 +21,6 @@ export class AppHomeComponent implements OnInit {
 	constructor(private http: HttpClient, private weatherService: WeatherService, private geo: GeocodingService) {}
 
 	ngOnInit(): void {
-		// if (this.weatherService.weatherData) {
-		// 	let weatherData = this.weatherService.weatherData;
-		// 	this.city = weatherData.
-		// }
-
 		this.geo.getCoords(this.city).subscribe(response => {
 			this.latitude = response.results[0].latitude;
 			this.longitude = response.results[0].longitude;
@@ -38,7 +33,15 @@ export class AppHomeComponent implements OnInit {
 				this.temperature = response.hourly.temperature_2m[0]
 			});
 		})
+	}
 
-		
+	onAppClick() {
+		if (this.weatherService.cityName) {
+			console.log('if works')
+			this.city = this.weatherService.cityName
+			this.temperatureArray = this.weatherService.weatherData.hourly;
+			this.temperature = this.temperatureArray[0]
+		}
+
 	}
 }
