@@ -61,6 +61,16 @@ export class WeatherComponent implements OnInit {
     });
   }
 
+  onSelectVariant(variant:any) {
+    alert('hi')
+    const {name, latitude, longitude} = variant;
+    this.weatherService.cityName = name;
+    this.weatherService.getWeather(latitude, longitude).subscribe(weatherResponse => {
+      this.weatherService.weatherData = weatherResponse;
+      console.log('onSelectVariant', this.weatherService.weatherData)
+    });
+  }
+
   setVisible(bool: boolean) {
     this.isVisible = bool;
   }

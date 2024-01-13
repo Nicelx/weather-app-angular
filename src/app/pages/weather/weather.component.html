@@ -22,8 +22,8 @@
 					(input)="onSearch()"
 				/>
 				<ul class="dropdown" [ngClass]="isVisible ? '' : 'hidden'">
-					<li class="dropdown__item" *ngFor="let variant of variants">
-						<div class = "dropdown__city">City {{ variant.name }}</div>
+					<li class="dropdown__item" *ngFor="let variant of variants" >
+						<div class = "dropdown__city" (click) = "onSelectVariant(variant)">City {{ variant.name }}</div>
 						<div class = "dropdown__province">Province {{ variant.admin1? variant.admin1 : variant.admin2 }}</div>
 					</li>
 				</ul>
