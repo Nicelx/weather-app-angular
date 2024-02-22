@@ -60,6 +60,8 @@
 	}
 
 	&__temperature-list {
+		overflow: hidden;
+		padding: 32px;
 		display: flex;
 		gap: 20px;
 	}
@@ -300,8 +302,8 @@
 }
 
 .temperature-forecast {
-	width: 44px;
-	height: 114px;
+	width: 66px;
+	height: 146px;
 	color: $color-light-primary;
 	display: flex;
 	flex-direction: column;

@@ -11,37 +11,13 @@
 		</div>
 	</div>
 	<div class="expand-block__temperature-list">
-		<div class="temperature-forecast">
-			<span class="temperature-forecast__time">12 AM</span>
+		<div class="temperature-forecast" *ngFor="let item of items">
+			<span class="temperature-forecast__time">{{ item.time }}</span>
 			<img
 				src="assets/png/moon-cloud-fast-wind.png"
 				class="temperature-forecast__weather-icon"
 			/>
-			<span class="temperature-forecast__temperature">19*</span>
-		</div>
-		<div class="temperature-forecast">
-			<span class="temperature-forecast__time">12 AM</span>
-			<img
-				src="assets/png/moon-cloud-fast-wind.png"
-				class="temperature-forecast__weather-icon"
-			/>
-			<span class="temperature-forecast__temperature">19*</span>
-		</div>
-		<div class="temperature-forecast">
-			<span class="temperature-forecast__time">12 AM</span>
-			<img
-				src="assets/png/moon-cloud-fast-wind.png"
-				class="temperature-forecast__weather-icon"
-			/>
-			<span class="temperature-forecast__temperature">19*</span>
-		</div>
-		<div class="temperature-forecast">
-			<span class="temperature-forecast__time">12 AM</span>
-			<img
-				src="assets/png/moon-cloud-fast-wind.png"
-				class="temperature-forecast__weather-icon"
-			/>
-			<span class="temperature-forecast__temperature">19*</span>
+			<span class="temperature-forecast__temperature">{{ item.temperature }}*</span>
 		</div>
 	</div>
 
@@ -93,9 +69,7 @@
 				<h3 class="feels-like__title weather-details__title">FEELS LIKE</h3>
 				<span class="feels-like__temperature">19*</span>
 			</div>
-			<span class="feels-like__additional-info"
-				>Similar to the actual temperature</span
-			>
+			<span class="feels-like__additional-info">Similar to the actual temperature</span>
 		</div>
 
 		<div class="humidity space-between">
