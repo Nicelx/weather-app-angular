@@ -1,7 +1,7 @@
 <div class="wrapper">
 	<div class="home">
 		<div class="home__info-block">
-			<h2 class="home__title">{{ city }}</h2>
+			<h2 (click)="logIt()" class="home__title">{{ city }}</h2>
 			<span class="home__temperature">{{ temperature}}°</span>
 			<span class="home__description">{{ description }}</span>
 			<span class="home__coords">Lat{{latitude}} Lon {{longitude}}</span>
